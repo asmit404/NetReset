@@ -3,7 +3,12 @@
 # WARNING: This will forget ALL Wi-Fi networks and reset firewall rules
 
 echo "This will reset all network and firewall settings."
-read -p "Are you sure you want to continue? (y/N) " confirm
+if [[ -r /dev/tty ]]; then
+    read -r -p "Are you sure you want to continue? (y/N) " confirm </dev/tty
+else
+    echo "Error: Interactive terminal is required for confirmation." >&2
+    exit 1
+fi
 if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
     echo "Cancelled."
     exit 1
