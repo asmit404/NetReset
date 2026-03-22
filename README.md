@@ -11,6 +11,16 @@ This repository contains scripts to reset network and firewall settings to defau
 
 ---
 
+## Quick Start (One Command) [MacOS only]
+
+Run this in your terminal:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/asmit404/NetReset/main/bootstrap.sh | bash
+```
+
+---
+
 ## macOS: Reset Network and Firewall
 
 ### Prerequisites
